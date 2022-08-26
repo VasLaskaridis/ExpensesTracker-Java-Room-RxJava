@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         viewModel = new ViewModelProvider(this, mViewModelFactory).get(MainActivityViewModel.class);
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.getMenu().getItem(1).setEnabled(false);
         navView.setBackground(null);
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
